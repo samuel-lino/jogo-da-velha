@@ -26,6 +26,7 @@
     font-size: clamp(6pt, 1.7vw, 25pt)
 }
 .J1{
+    width: 10%;
     text-align: center;
     margin-right: 75%;
 }
