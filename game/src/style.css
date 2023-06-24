@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.App{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+.interface{
+    width: 80%;
+    height: 100vh;
+    background-color: brown;
+    position: relative;
+}
+.jogador{
+    
+}
