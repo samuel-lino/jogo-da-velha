@@ -34,69 +34,109 @@ jQuery(function($){
         let d1 = $('.d1')
         let d2 = $('.d2')
         let ganhar = ''
+        let ver = 0
         for(let obj of l1){
             let ok = $(l1[0]).find('h1').html()
             if($(obj).find('h1').html() === ok){
+                ver = ver + 1
                 if(obj === l1[2]){
-                    ganhar = 'l1'
+                    if(ver === 3){
+                      ganhar = 'l1'  
+                    }
                 }
             }else{
+                ver = 0
             }
         }
         for(let obj of l2){
             let ok = $(l2[0]).find('h1').html()
             if($(obj).find('h1').html() === ok){
+                ver = ver + 1
                 if(obj === l2[2]){
-                    ganhar = 'l2'
+                    if(ver === 3){
+                      ganhar = 'l2'  
+                    }
                 }
+            }else{
+                ver = 0
             }
         }
         for(let obj of l3){
             let ok = $(l3[0]).find('h1').html()
             if($(obj).find('h1').html() === ok){
+                ver = ver + 1
                 if(obj === l3[2]){
-                    ganhar = 'l3'
+                    if(ver === 3){
+                      ganhar = 'l3'  
+                    }
                 }
+            }else{
+                ver = 0
             }
         }
         for(let obj of c1){
             let ok = $(c1[0]).find('h1').html()
             if($(obj).find('h1').html() === ok){
+                ver = ver + 1
                 if(obj === c1[2]){
-                    ganhar = 'c1'
+                    if(ver === 3){
+                      ganhar = 'c1'  
+                    }
                 }
+            }else{
+                ver = 0
             }
         }
         for(let obj of c2){
             let ok = $(c2[0]).find('h1').html()
             if($(obj).find('h1').html() === ok){
+                ver = ver + 1
                 if(obj === c2[2]){
-                    ganhar = 'c2'
+                    if(ver === 3){
+                      ganhar = 'c2'  
+                    }
                 }
+            }else{
+                ver = 0
             }
         }
         for(let obj of c3){
             let ok = $(c3[0]).find('h1').html()
             if($(obj).find('h1').html() === ok){
+                ver = ver + 1
                 if(obj === c3[2]){
-                    ganhar = 'c3'
+                    if(ver === 3){
+                      ganhar = 'c3'  
+                    }
                 }
-            }         
+            }else{
+                ver = 0
+            }       
         }
         for(let obj of d1){
             let ok = $(d1[0]).find('h1').html()
             if($(obj).find('h1').html() === ok){
+                ver = ver + 1
                 if(obj === d1[2]){
-                    ganhar = 'd1'
+                    if(ver === 3){
+                      ganhar = 'd1'  
+                    }
                 }
+            }else{
+                ver = 0
             }
         }
         for(let obj of d2){
             let ok = $(d2[0]).find('h1').html()
             if($(obj).find('h1').html() === ok){
+                ver = ver + 1
                 if(obj === d2[2]){
-                    ganhar = 'd2'
+                    if(ver === 3){
+                      ganhar = 'd2'  
+                    }
                 }
+            }else{
+                ver = 0
             }
         }
         return ganhar
