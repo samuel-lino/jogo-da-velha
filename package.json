@@ -8,5 +8,8 @@
   },
   "repository": "https://github.com/samuel-lino/jogo-da-velha-em-react",
   "author": "Samuel",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jquery": "^3.7.0"
+  }
 }
