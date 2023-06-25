@@ -1,31 +1,39 @@
 jQuery(function($){
+    let njogadas = 0
     let jogada = 'O'
     $('.btn').on('click', function(){
         jogar(this)
     })
     
     function jogar(id){
-        let onde = $(id).attr('id')
-        $('#'+ onde).find('h1').html(jogada)
-        $('#'+ onde).find('h1').removeClass('hide')
-        let vit = verifica()
-        if(vit !== ''){
-            $('.'+ vit).addClass('ganhou')
-            alert('parabens o '+ $('.vez').html() + ' ganhou')
+        if(observar(id)){
+            njogadas +=1
+            let onde = $(id).attr('id')
+            $('#'+ onde).find('h1').html(jogada)
+            $('#'+ onde).find('h1').removeClass('hide')
+            let vit = verifica()
+            if(vit !== ''){
+                $('.'+ vit).addClass('ganhou')
+                alert('parabens o '+ $('.vez').html() + ' ganhou')
+            }
+            if(jogada === 'O'){
+                jogada = 'X'
+                $('.vez').html('jogador 2')
+            }else{
+                jogada = 'O'
+                $('.vez').html('jogador 1')
+            }
         }
-        if(jogada === 'O'){
-            jogada = 'X'
-            $('.vez').html('jogador 2')
-        }else{
-            jogada = 'O'
-            $('.vez').html('jogador 1')
-        }
+        
         
         
     }
     function verifica(){
+        if(njogadas === 9){
+            alert('deu velha')
+            return ''
+        }
         let l1 = $('.l1')
-        console.log($(l1[0]).find('h1').html())
         let l2 = $('.l2')
         let l3 = $('.l3')
         let c1 = $('.c1')
@@ -141,6 +149,15 @@ jQuery(function($){
         }
         return ganhar
         
+    }
+    function observar(obj){
+        let onde = $(obj).attr('id')
+        let texto = $('#'+onde).find('h1').html()
+        if(texto === 'O' ||texto === 'X'){
+            return false
+        }else{
+            return true
+        }
     }
 
 })
