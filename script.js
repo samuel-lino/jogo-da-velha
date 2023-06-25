@@ -23,10 +23,7 @@ jQuery(function($){
                 jogada = 'O'
                 $('.vez').html('jogador 1')
             }
-        }
-        
-        
-        
+        }  
     }
     function verifica(){
         if(njogadas === 9){
